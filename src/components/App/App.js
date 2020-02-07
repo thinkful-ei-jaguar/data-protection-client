@@ -1,13 +1,8 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import Header from '../Header/Header'
-<<<<<<< HEAD
-// import PrivateRoute from '../Utils/PrivateRoute'
-// import PublicOnlyRoute from '../Utils/PublicOnlyRoute'
-=======
 import PrivateRoute from '../Utils/PrivateRoute'
 import PublicOnlyRoute from '../Utils/PublicOnlyRoute'
->>>>>>> basic-auth-login
 import ArticleListPage from '../../routes/ArticleListPage/ArticleListPage'
 import ArticlePage from '../../routes/ArticlePage/ArticlePage'
 import LoginPage from '../../routes/LoginPage/LoginPage'
@@ -37,17 +32,6 @@ class App extends Component {
               path={'/'}
               component={ArticleListPage}
             />
-<<<<<<< HEAD
-            <Route
-              path={'/login'}
-              component={LoginPage}
-            />
-            <Route
-              path={'/register'}
-              component={RegistrationPage}
-            />
-            <Route
-=======
             <PublicOnlyRoute
               path={'/login'}
               component={LoginPage}
@@ -57,7 +41,6 @@ class App extends Component {
               component={RegistrationPage}
             />
             <PrivateRoute
->>>>>>> basic-auth-login
               path={'/article/:articleId'}
               component={ArticlePage}
             />

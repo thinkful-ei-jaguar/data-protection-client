@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 import TokenService from '../services/token-service'
->>>>>>> basic-auth-login
 import config from '../config'
 
 const ArticleApiService = {
@@ -19,10 +16,7 @@ const ArticleApiService = {
   getArticle(articleId) {
     return fetch(`${config.API_ENDPOINT}/articles/${articleId}`, {
       headers: {
-<<<<<<< HEAD
-=======
         'authorization': `basic ${TokenService.getAuthToken()}`,
->>>>>>> basic-auth-login
       },
     })
       .then(res =>
@@ -34,10 +28,7 @@ const ArticleApiService = {
   getArticleComments(articleId) {
     return fetch(`${config.API_ENDPOINT}/articles/${articleId}/comments`, {
       headers: {
-<<<<<<< HEAD
-=======
         'authorization': `basic ${TokenService.getAuthToken()}`,
->>>>>>> basic-auth-login
       },
     })
       .then(res =>
@@ -51,10 +42,7 @@ const ArticleApiService = {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
-<<<<<<< HEAD
-=======
         'authorization': `basic ${TokenService.getAuthToken()}`,
->>>>>>> basic-auth-login
       },
       body: JSON.stringify({
         article_id: articleId,
